@@ -1,0 +1,6 @@
+{
+  "name": "LoopCore macOS Audio Loopback",
+  "description": "Zero-latency virtual macOS audio loopback driver and routing patchbay with multi-channel mixing, precision monitoring, and CoreAudio HAL configuration.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
