@@ -476,6 +476,7 @@ class LoopCoreAudioEngine {
     } catch (err) {
       console.warn('Microphone permission not granted or unavailable:', err);
       // Fallback to warm chords if mic blocked
+      this.currentMode = 'chords';
       this.startChordsGenerator();
     }
   }

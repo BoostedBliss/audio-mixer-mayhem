@@ -79,7 +79,9 @@ export default function App() {
   useEffect(() => {
     const isAnySolo = currentDevice.channels.some((c) => c.isSolo);
     audioEngine.updateChannelParameters(currentDevice.channels, isAnySolo);
-  }, [currentDevice.channels]);
+  }, [
+    currentDevice.channels.map((c) => `${c.channelNumber}:${c.faderDb}:${c.pan}:${c.isMuted}:${c.isSolo}:${c.isPhaseInverted}:${c.isHpfActive}`).join('|'),
+  ]);
 
   // Update master volume
   useEffect(() => {
